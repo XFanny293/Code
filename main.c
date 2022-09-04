@@ -32,10 +32,32 @@ int main(){
     //一般在C编译系统自动将float型数据都自动转换为double型,然后进行运算
 }*/
 
-#include<stdio.h>
+/*#include<stdio.h>
 int main(){
     float h=3,r=1.5,pi=3.1415926,v;//定义实型变量并赋初值
     v=pi*r*r*h;
     printf("圆柱体积为:v=%f\n",v);
-}
+}*/
 //2022-09-03
+
+//字符串
+//字符串的结束标志\0
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+    char arr1[] = "abc";//字符串
+    char arr2[] = {'a', 'b', 'c'};//字符
+    char arr4[] = {'a', 'b', 'c', '\0'};//字符串
+    char arr5[4] = {'a', 'b', 'c'};//字符串
+    printf("%s\n", arr1);
+    printf("%s\n", arr2);
+    printf("%s\n", arr4);
+    printf("%s\n", arr5);
+    //求字符的长度
+    printf("%d\n", strlen(arr1));
+    printf("%d\n", strlen(arr2));
+    printf("%lu\n", strlen(arr4));
+    printf("%lu\n", strlen(arr5));
+}
