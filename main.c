@@ -42,6 +42,7 @@ int main(){
 
 //字符串
 //字符串的结束标志\0
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -60,4 +61,14 @@ int main() {
     printf("%d\n", strlen(arr2));
     printf("%lu\n", strlen(arr4));
     printf("%lu\n", strlen(arr5));
-}
+}*/
+#include <stdio.h>
+
+//int main() {
+//    double a = 28;
+//    int b = (int) a % 9;
+//    int c = (int) b % 4;
+//    printf("%d\n", b);
+//    printf("%d\n", c);
+//
+//}
