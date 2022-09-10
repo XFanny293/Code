@@ -2,6 +2,7 @@
 // Created on 2022/9/5.
 //
 #include <stdio.h>
+#include <math.h>   // 程序中要调用求平方根函数sqrt
 
 int main() {
     /*  //使被定义的变量的一部分赋初值
@@ -30,7 +31,7 @@ int main() {
      printf("%d,%d", a, b);*/
 
     //用3个getchar函数先从键盘向计算机输入Cxf字符，然后用putchar函数输出
-    char a, b, c;   //定义字符变量a,b,c,d
+/*    char a, b, c;   //定义字符变量a,b,c,d
     a = getchar();    //从键盘输入一个字符，送给字符变量a、b、c、d
     b = getchar();
     c = getchar();
@@ -38,6 +39,19 @@ int main() {
     putchar(b);
     putchar(c);
     putchar('\n');  //换行
+    return 0;*/
+/*    int a, b;
+    printf("a=%d\n", a);
+    scanf("%f", &b);*/
+//20220910
+//输入三角形的三个边长,求三角形面积
+
+    double a, b, c, s, area;    //定义各变量,均为double型
+    printf("请输入三个数字,并用英文逗号分隔\n");
+    scanf("%lf,%lf,%lf", &a, &b, &c);  //输入三角形的三条边
+    s = (a + b + c) / 2.0;      //计算出s
+    area = sqrt(s * (s - a) * (s - b) * (s - c)); //计算三角形的面积area
+    printf("a=%f\nb=%f\nc=%f\narea=%f\n", a, b, c, area);   //输出结果
     return 0;
 }
 
