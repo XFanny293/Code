@@ -53,5 +53,6 @@ int main() {
     area = sqrt(s * (s - a) * (s - b) * (s - c)); //计算三角形的面积area
     printf("a=%f\nb=%f\nc=%f\narea=%f\n", a, b, c, area);   //输出结果
     return 0;
+    //record
 }
 
