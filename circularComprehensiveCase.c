@@ -58,7 +58,7 @@ int main() {
 */
 //结构体
 //创建一个学生
-struct Stu {
+/*struct Stu {
     char name[20];//成员变量
     int age;
     double score;
@@ -72,7 +72,7 @@ int main() {
     printf("2:%s%d%lf\n", ps->name, ps->age, ps->score);
     //结构体指针——> 成员变量名
     return 0;
-}
+}*/
 
 
 
