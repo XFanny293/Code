@@ -54,7 +54,7 @@ int main() {
     }
 }*/
 //二维数组案例p84
-int main() {
+/*int main() {
     int a[2][3] = {{1, 2, 3},
                    {4, 5, 6}};//定义a数组，并赋初值
     int b[3][2], i, j;//定义b数组，不赋初值
@@ -75,10 +75,48 @@ int main() {
         printf("\n");
     }
     return 0;
+}*/
+//p85例题2
+//有一个3x4的矩阵，要求编写程序求出其中值最大的那个元素的值，以及其所在的行号和列号
+/*int main() {
+    int a[3][4] = {{1, 2,  3,  4},
+                   {5, 66, 7,  8},
+                   {9, 10, 11, 12}};
+    int i, j, max, temp, row = 0, column = 0;
+    max = a[0][0];
+    printf("a:\n");
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 4; j++) {
+            printf("%5d ", a[i][j]);
+            if (a[i][j] > max) {
+                max = a[i][j];
+                row = i;
+                column = j;
+            }
+        }
+    }
+    printf("\nmax=%d\nrow=%d\ncolumn=%d\n", max, row, column);
+    return 0;
+}*/
+/*int main() {
+    char c[11] = {'I', ' ', 'a', 'm', ' ', 'X', 'F', 'a', 'n', 'n', 'y'};
+    int i;
+    for (i = 0; i < 11; i++) {
+        printf("%c", c[i]);
+    }
+    printf("\n");
+    return 0;
+}*/
+int main() {
+    char diamond[2][3] = {{' ', '*', ' '},
+                          {'*', ' ', '*'}};
+//    int i, j;
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++)
+            printf("%c", diamond[i][j]);
+        printf("\n");
+    }
 }
-
-
-
 
 
 
