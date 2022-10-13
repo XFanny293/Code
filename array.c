@@ -2,7 +2,7 @@
 // Created on 2022/10/9.
 //
 #include <stdio.h>
-
+#include <string.h>
 /*
 int main() {
     int i, a[10]; //定义整型数组a，a包含10个元素
@@ -107,7 +107,7 @@ int main() {
     printf("\n");
     return 0;
 }*/
-int main() {
+/*int main() {
     char diamond[2][3] = {{' ', '*', ' '},
                           {'*', ' ', '*'}};
 //    int i, j;
@@ -116,6 +116,21 @@ int main() {
             printf("%c", diamond[i][j]);
         printf("\n");
     }
+}*/
+//p91 输入一行字符，统计其中有多少个单词，单词之间用空格分隔开。
+int main() {
+    char string[81];
+    int i, num = 0, word = 0;
+    char c;
+    gets(string);//读入一个字符串给字符数组string
+    for (i = 0; (c = string[i]) != '\0'; i++)//只要字符不是'\0'就继续执行循环
+        if (c == ' ')word = 0;//如果字符是空格，使word置0
+        else if (word == 0) { //如果字符不是空格且word原值为0
+            word = 1; //使word置1
+            num++;  //num累加1，表示增加一个单词
+        }
+    printf("There is %d words in the line.\n", num);//输出单词数
+    return 0;
 }
 
 
