@@ -118,7 +118,7 @@ int main() {
     }
 }*/
 //p91 输入一行字符，统计其中有多少个单词，单词之间用空格分隔开。
-int main() {
+/*int main() {
     char string[81];
     int i, num = 0, word = 0;
     char c;
@@ -131,8 +131,27 @@ int main() {
         }
     printf("There is %d words in the line.\n", num);//输出单词数
     return 0;
-}
-
+}*/
+/*int main() {
+*//*    char str[2];
+    scanf("%s", str);
+    printf("%c,%c\n", str[0], str[1]);*//*
+    int a[2][3] = {{2, 4,  6},
+                   {8, 10, 12}};
+    int i, j;
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
+            printf("%5d ", a[i][j]);
+        }
+        printf("\n");
+    }
+    for (j = 0; j < 3; j++) {
+        for (i = 0; i < 2; i++) {
+            printf("%5d ", a[i][j]);
+        }
+        printf("\n");
+    }
+}*/
 
 
 
