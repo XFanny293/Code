@@ -106,5 +106,17 @@ int main() {
     return 0;
 }*/
 int main() {
+    float add(float x, float y);//对add函数作声明
+    float a, b, c;
+    printf("请输入a和b,以英文逗号隔开\n");
+    scanf("%f,%f", &a, &b);
+    c = add(a, b); //调用add函数
+    printf("sum:%f\n", c);
+    return 0;
+}
 
+float add(float x, float y) {
+    float z = 0;
+    z = x + y;
+    return z; //把变量z的值作为函数值返回
 }
