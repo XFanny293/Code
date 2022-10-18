@@ -2,6 +2,7 @@
 // Created by xFanny on 2022/10/14.
 //
 #include<stdio.h>
+#include <string.h>
 
 /*
 void Swap(int *pa, int *pb) {
@@ -105,6 +106,7 @@ int main() {
     }
     return 0;
 }*/
+/*
 int main() {
     float add(float x, float y);//对add函数作声明
     float a, b, c;
@@ -119,4 +121,40 @@ float add(float x, float y) {
     float z = 0;
     z = x + y;
     return z; //把变量z的值作为函数值返回
+}*/
+//链式访问：把一个函数的返回值作为另一个函数的参数
+/*
+int main() {
+    int len = strlen("cxf");
+    printf("%d\n", len);
+    //链式访问
+    printf("%d\n", strlen("cxf"));
+    printf("%d", printf("%d", printf("%d", 43)));//4321
+    return 0;
+}*/
+//p105例5
+int main() {
+    int max4(int a, int b, int c, int d);//对max4函数的声明
+    int a, b, c, d, max;
+    printf("please enter 4 integer numbers:");
+    scanf("%d%d%d%d", &a, &b, &c, &d);
+    max = max4(a, b, c, d);//调用max4函数，得到4个数中最大者
+    printf("max=%d\n", max);
+    return 0;
+}
+
+int max4(int a, int b, int c, int d) {
+    int max2(int a, int b);//对函数max2的声明
+    int m;
+    m = max2(a, b);//调用max2函数，得到a和b两个数中的较大者，放在m中
+    m = max2(m, c);//调用max2函数，得到a，b，c这3个数中的较大者，放在m中
+    m = max2(m, d);
+    return (m);
+}
+
+int max2(int a, int b) {
+    if (a >= b)
+        return a;
+    else
+        return b;
 }
