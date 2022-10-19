@@ -133,6 +133,7 @@ int main() {
     return 0;
 }*/
 //p105例5
+/*
 int main() {
     int max4(int a, int b, int c, int d);//对max4函数的声明
     int a, b, c, d, max;
@@ -157,4 +158,24 @@ int max2(int a, int b) {
         return a;
     else
         return b;
+}*/
+//p108 例6
+int main() {
+    int fac(int n);
+    int n, y;
+    printf("input an integer number:");
+    scanf("%d", &n);
+    y = fac(n);
+    printf("%d\n", n, y);
+    return 0;
+}
+
+int fac(int n) {
+    int f;
+    if (n < 0)
+        printf("n<=0,data error");
+    else if (n == 1)
+        f = 1;
+    else f = fac(n - 1) * n;
+    return (f);
 }
