@@ -160,6 +160,7 @@ int max2(int a, int b) {
         return b;
 }*/
 //p108 例6
+/*
 int main() {
     int fac(int n);
     int n, y;
@@ -178,4 +179,76 @@ int fac(int n) {
         f = 1;
     else f = fac(n - 1) * n;
     return (f);
+}*/
+/* 递归练习题
+int my_strlen(char *str) {
+    if (*str != '\0') return 1 + my_strlen(str + 1);
+    else return 0;
+}
+
+int main() {
+    char arr[] = "cxf";
+    printf("%d\n", my_strlen(arr));
+    return 0;
+}*/
+//递归与迭代：求n的阶乘
+/*
+int Fac(int n) {
+    if (n <= 1)
+        return 1;
+    else
+        return n * Fac(n - 1);
+}
+
+int main() {
+    int n = 0;
+    scanf("%d", &n);
+*/
+/*    int i = 0;
+    int ret = 1;
+    //迭代，循环是一种迭代的方法
+    for (i = 0; i <= n; i++) {
+        ret = ret * i;
+    }
+    printf("%d", ret);*//*
+
+    int ret = Fac(n);
+    printf("%d", ret);
+    return 0;
+}*/
+//斐波那契数列
+/*
+int Fib(int n) {
+    if (n <= 2)return 1;
+    else
+        return Fib(n - 1) + Fib(n - 2);
+}
+
+int main() {
+    int n = 0;
+    scanf("%d", &n);
+    int ret = Fib(n);
+    printf("%d", ret);
+    return 0;
+}*/
+//例7 输入10个数，要求输出其中值最大的元素和该数的位置。
+int main() {
+    int max(int x, int y);//函数声明
+    int a[10], m, n, i;
+    printf("enter 10 integer numbers:");
+    for (i = 0; i < 10; i++)  //循环给a[0]~a[9]赋值
+        scanf("%d", &a[i]);
+    printf("\n");
+    for (i = 0, m = a[0], n = 0; i < 10; i++) {
+        if (a[i] > m) { //若max函数返回的值大于m
+            m = max(m, a[i]);//max函数返回的值取代m的原值
+            n = i; //把此数组元素的序号记下来，放在n中
+        }
+    }
+    printf("The largest number is %d\nit is the largest number.\n", m, n + 1);
+    return 0;
+}
+
+int max(int x, int y) {
+    return (x > y ? x : y);
 }
