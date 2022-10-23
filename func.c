@@ -232,6 +232,7 @@ int main() {
     return 0;
 }*/
 //例7 输入10个数，要求输出其中值最大的元素和该数的位置。
+/*
 int main() {
     int max(int x, int y);//函数声明
     int a[10], m, n, i;
@@ -251,4 +252,49 @@ int main() {
 
 int max(int x, int y) {
     return (x > y ? x : y);
+}*/
+//----------------------------------------------------------------
+//p110例8
+/*
+float average(float array[10]) {
+    int i;
+    float aver, sum = array[0];
+    for (i = 1; i < 10; i++)
+        sum += array[i];//累加学生的成绩
+    aver = sum / 10;//求出平均成绩
+    return aver;//将平均成绩作为函数值带回主函数
+}
+
+int main() {
+    float score[10], aver;
+    int i;
+    printf("input 10 score:\n");
+    for (i = 0; i < 10; i++)
+        scanf("%f", &score[i]);
+    printf("\n");
+    aver = average(score);
+    printf("The average score is %5.2f\n", aver);
+    return 0;
+}*/
+//求10个整数中最大值
+/*
+int main() {
+    int arr[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int max = arr[0];
+    for (int i = 0; i < 10; i++)
+        if (arr[i] > max)max = arr[i];
+    printf("max:%d\n", max);
+    return 0;
+}*/
+//在屏幕上输出9*9乘法口诀表
+int main() {
+    int i, j, sum;
+    for (i = 1; i < 10; i++) {
+        for (j = 1; j <= i; j++) {
+//            printf("i=%d,j=%d ", i, j);
+            sum = j * i;
+            printf("%d*%d=%2d ", j, i, sum);
+        }
+        printf("\n");
+    }
 }
