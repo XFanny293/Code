@@ -6,4 +6,4 @@ set(CMAKE_C_STANDARD 11)
 include_directories(.)
 
 add_executable(C_Code
-        main.c operatorsAndExpressions.c selectStructure.c Comprehensive_selection.c circularComprehensiveCase.c array.c func.c)
+        Learn1/main.c Learn1/operatorsAndExpressions.c Learn1/selectStructure.c Learn1/Comprehensive_selection.c Learn1/circularComprehensiveCase.c Learn1/array.c Learn1/func.c game/test.c game/game.h game/game.c)

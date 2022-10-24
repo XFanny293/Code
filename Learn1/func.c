@@ -287,6 +287,7 @@ int main() {
     return 0;
 }*/
 //在屏幕上输出9*9乘法口诀表
+/*
 int main() {
     int i, j, sum;
     for (i = 1; i < 10; i++) {
@@ -297,4 +298,4 @@ int main() {
         }
         printf("\n");
     }
-}
+}*/
