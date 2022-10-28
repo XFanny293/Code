@@ -4,6 +4,7 @@
 
 #include "game.h"
 
+/*
 void InitBoard(char board[ROW][COL], int row, int col) {
     int i = 0;
     int j = 0;
@@ -113,4 +114,4 @@ char IsWin(char board[ROW][COL], int row, int col) {
     }
     //继续
     return 'C';
-}
+}*/
