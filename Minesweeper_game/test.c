@@ -3,7 +3,7 @@
 //
 #include "game2.h"
 
-void menu() {
+/*void menu() {
     printf("********************************\n");
     printf("**********  1. play   **********\n");
     printf("**********  0. exit   **********\n");
@@ -17,12 +17,18 @@ void game() {
     InitBoard(mine, ROWS, COLS, '0');
     InitBoard(show, ROWS, COLS, '*');
     //打印棋盘
-    DisplayBoard(mine, ROW, COL);
+    //DisplayBoard(mine, ROW, COL);
     DisplayBoard(show, ROW, COL);
+    //布置雷
+    SetMine(mine, ROW, COL);
+    //DisplayBoard(mine, ROW, COL);
+    //排查雷
+    FindMine(mine, show, ROW, COL);
 }
 
 int main() {
     int input = 0;
+    srand((unsigned int) time(NULL));
     do {
         menu();
         printf("请选择：>");
@@ -40,4 +46,4 @@ int main() {
         }
     } while (input);
     return 0;
-}
+}*/
