@@ -50,6 +50,7 @@ int main() {
     return 0;
 }*/
 // 交换两个int变量的值，不能使用第三个变量。即a=3，b=5，交换之后 a=5，b=3；
+/*
 int main() {
     int a = 3;
     int b = 5;
@@ -62,5 +63,19 @@ int main() {
 //    b = a - b;
 //    a = a - b;
     printf("a = %d, b = %d\n", a, b);
+    return 0;
+}*/
+/*
+int main() {
+    int i = 0, a = 1, b = 2, c = 3, d = 4;
+    i = a++ && ++b && d++;
+    printf("a = %d, b = %d,c = %d,d = %d\n", a, b, c, d);
+    return 0;
+}*/
+int main() {
+    int i = 0, a = 0, b = 2, c = 3, d = 4;
+    i = a++ || ++b || d++;
+    //因为a++为假-继续执行，++b是3为真，真或者任何都为真，所以后面都不执行
+    printf("a = %d, b = %d,c = %d,d = %d\n", a, b, c, d);//1 3 3 4
     return 0;
 }
