@@ -72,10 +72,22 @@ int main() {
     printf("a = %d, b = %d,c = %d,d = %d\n", a, b, c, d);
     return 0;
 }*/
+/*
 int main() {
     int i = 0, a = 0, b = 2, c = 3, d = 4;
     i = a++ || ++b || d++;
     //因为a++为假-继续执行，++b是3为真，真或者任何都为真，所以后面都不执行
     printf("a = %d, b = %d,c = %d,d = %d\n", a, b, c, d);//1 3 3 4
+    return 0;
+}*/
+int Add(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int a = 10;
+    int b = 20;
+    // 函数调用
+    int ret = Add(a, b); // () - 函数调用操作符
     return 0;
 }
