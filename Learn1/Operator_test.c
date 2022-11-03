@@ -80,6 +80,7 @@ int main() {
     printf("a = %d, b = %d,c = %d,d = %d\n", a, b, c, d);//1 3 3 4
     return 0;
 }*/
+/*
 int Add(int x, int y) {
     return x + y;
 }
@@ -89,5 +90,36 @@ int main() {
     int b = 20;
     // 函数调用
     int ret = Add(a, b); // () - 函数调用操作符
+    return 0;
+}*/
+//int main() {
+//    int i = 5;
+//    do {
+//        printf("%d\n", i);
+//    } while (-i > 5);
+//    printf("finished");
+//
+//}
+
+//书：书名，书号，定价
+//人：名字，年龄，性别
+// 创建了一个自定义的类型
+struct Book {
+    // 结构体的成员（成员变量）
+    char name[20];
+    char id[20];
+    int price;
+};
+
+int main() {
+    int num = 10;
+    // 结构体变量名.成员名
+    struct Book b = {"C语言", "C20221103", 93};//结构体的成员访问
+    struct Book *pb = &b;//结构体地址
+    printf("书名：%s,书号：%s\n", (*pb).name, (*pb).id);//第一种，先解引用找到结果对象，再.的对象找到
+    printf("书名：%s,书号：%s\n", pb->name, pb->id);// 第二种，pb是一个结构体指针，它指向一个对象name，pb->name是pb指向箭头name
+    printf("===========================\n");
+    printf("书名：%s,书号：%s\n", b.name, b.id);// . 操作符
+    printf("价格：%d", b.price);
     return 0;
 }
