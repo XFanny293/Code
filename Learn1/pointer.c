@@ -70,7 +70,7 @@ int main() {
     char *pch[5];
     return 0;
 }*/
-void swap(int *p1, int *p2) {
+/*void swap(int *p1, int *p2) {
     int temp;
     temp = *p1; //使*p1和p2互换
     *p1 = *p2;
@@ -87,7 +87,53 @@ int main() {
     if (a < b)swap(p1, p2); // 如果a<b，调用swap函数
     printf("max=%d,min=%d\n", a, b);
     return 0;
+}*/
+
+//下标法
+/*
+int main() {
+    int a[10];
+    int i;
+    printf("请输入10个整数：");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &a[i]);
+    }
+    for (i = 0; i < 10; i++) {
+        printf("%d", a[i]);//数组元素用数组名和下标表示
+    }
+    printf("\n");
+    return 0;
 }
+*/
+//通过数组名计算数组元素地址，找出元素的值
+/*int main() {
+    int a[10];
+    int i;
+    printf("请输入10个整数：");
+    for (i = 0; i < 10; i++)
+        scanf("%d", &a[i]);
+    for (i = 0; i < 10; i++)
+        //(a+i)是a数组中序号为i的元素的地址，*(a+i)是该元素的值
+        printf("%d", *(a + i)); //通过数组名和元素序号计算元素地址，再找到该元素
+    printf("\n");
+    return 0;
+}*/
+
+//用指针变量指向数组元素
+int main() {
+    int a[10];
+    int *p, i;
+    printf("请输入10个整数：");
+    for (i = 0; i < 10; i++)
+        scanf("%d", &a[i]);
+    for (p = a; p < (a + 10); p++)
+        printf("%d", p);  //用指针指向当前的数组元素
+    printf("\n");
+    return 0;
+}
+
+
+
 
 
 
