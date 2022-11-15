@@ -120,7 +120,7 @@ int main() {
 }*/
 
 //用指针变量指向数组元素
-int main() {
+/*int main() {
     int a[10];
     int *p, i;
     printf("请输入10个整数：");
@@ -130,7 +130,79 @@ int main() {
         printf("%d", p);  //用指针指向当前的数组元素
     printf("\n");
     return 0;
+}*/
+//p136 例3
+/*int main() {
+    void inv(int x[], int n);  //inv函数声明
+    int i, a[10] = {2, 9, 3, 11, 0, 6, 7, 5, 4, 2};
+    printf("原始数组为：\n");
+    for (i = 0; i < 10; i++)
+        printf("%d ", a[i]); // 输出未交换时数组各元素的值
+    printf("\n");
+    inv(a, 10); //调用inv函数，进行交换
+    printf("反序后数组为：\n");
+    for (i = 0; i < 10; i++)
+        printf("%d ", a[i]); //输出交换后数组各元素的值
+    printf("\n");
+    return 0;
 }
+
+void inv(int x[], int n) {
+    int temp, i, j, m = (n - 1) / 2;
+    for (i = 0; i < m; i++) {
+        j = n - 1 - i;
+        temp = x[i];
+        x[i] = x[j];
+        x[j] = temp;
+    }
+    return;
+}*/
+//修改程序
+/*void inv(int *x, int n) {
+    int *p, temp, *i, *j, m = (n - 1) / 2;
+    i = x;
+    j = x + n - 1;
+    p = x + m;
+    for (; i <= p; i++, j--) {
+        temp = *i;
+        *i = *j;
+        *j = temp;
+    }
+    return;
+}
+
+int main() {
+    int i, a[10] = {2, 9, 3, 11, 0, 6, 7, 5, 4, 2};
+    printf("原始数组为：\n");
+    for (i = 0; i < 10; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    inv(a, 10);
+    printf("反序后数组为：\n");
+    for (i = 0; i < 10; i++)
+        printf("%d ", a[i]);
+    printf("\n");
+    return 0;
+}*/
+
+int main() {
+    int j, a[] = {1, 3, 5, 7, 9, 11, 13, 15}, *p = a + 5;
+    for (j = 4; j > 0; j--) {
+        switch (j) {
+            case 1:
+            case 2:
+                printf("%d ", *p);
+                break;
+            case 3:
+                printf("%d ", *(--p));
+            case 4:
+                printf("%d ", *(--p));
+        }
+    }
+}
+
+
+
 
 
 
