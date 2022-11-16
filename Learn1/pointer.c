@@ -185,7 +185,7 @@ int main() {
     return 0;
 }*/
 
-int main() {
+/*int main() {
     int j, a[] = {1, 3, 5, 7, 9, 11, 13, 15}, *p = a + 5;
     for (j = 4; j > 0; j--) {
         switch (j) {
@@ -199,12 +199,43 @@ int main() {
                 printf("%d ", *(--p));
         }
     }
+}*/
+
+
+/*int main() {
+    char string[] = "I love study!";
+    printf("string数组存放的字符串是：%s\n", string); //用%s格式声明输出整个字符串
+    printf("该字符串的第8个字符是：%c\n", string[7]); //用%c格式输出一个字符数组元素
+    return 0;
+}*/
+
+//例7
+/*int main() {
+    char a[] = "I am chinese", b[20]; //定义字符数组
+    int i;
+    for (i = 0; *(a + i) != '\0'; i++)
+        *(b + i) = *(a + i); //用地址法访问数组元素
+    *(b + i) = '\0'; //在b数组的有效字符之后加'\0'
+    printf("string a is:%s\n", a); //输出a数组中全部有效字符
+    printf("string b is:");
+    for (i = 0; b[i] != '\0'; i++)
+        printf("%c", b[i]);  //用下标法访问数组元素
+    printf("\n");
+    return 0;
+}*/
+
+//指针写法
+int main() {
+    char a[] = "I am chinese", b[20], *p1, *p2;
+    p1 = a;
+    p2 = b; //p1,p2分别指向a数组和b数组中的第一个元素
+    for (; *p1 != '\0'; p1++, p2++) //p1,p2每次自加1
+        *p2 = *p1; //将p1所指向的元素的值赋给p2所指向的元素
+    *p2 = '\0';    //在复制完全部有效字符后加'\0'
+    printf("string a is:%s\n", a); //输出a数组中的字符
+    printf("string b is:%s\n", b); //输出b数组中的字符
+    return 0;
 }
-
-
-
-
-
 
 
 
