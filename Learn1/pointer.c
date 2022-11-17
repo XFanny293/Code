@@ -225,7 +225,7 @@ int main() {
 }*/
 
 //指针写法
-int main() {
+/*int main() {
     char a[] = "I am chinese", b[20], *p1, *p2;
     p1 = a;
     p2 = b; //p1,p2分别指向a数组和b数组中的第一个元素
@@ -235,7 +235,7 @@ int main() {
     printf("string a is:%s\n", a); //输出a数组中的字符
     printf("string b is:%s\n", b); //输出b数组中的字符
     return 0;
-}
+}*/
 
 
 
