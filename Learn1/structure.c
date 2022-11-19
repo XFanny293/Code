@@ -60,6 +60,7 @@ int main() {
 
 
 //结构体传参
+/*
 struct S {
     int data[1000];
     int num;
@@ -79,4 +80,4 @@ int main() {
     print1(s);//传结构体
     print2(&s);//传地址
     return 0;
-}
+}*/
