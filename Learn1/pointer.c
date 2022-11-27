@@ -188,15 +188,16 @@ int main() {
 /*int main() {
     int j, a[] = {1, 3, 5, 7, 9, 11, 13, 15}, *p = a + 5;
     for (j = 4; j > 0; j--) {
+        printf("j=%d ", j);
         switch (j) {
             case 1:
             case 2:
-                printf("%d ", *p);
+                printf("%d二 ", *p);
                 break;
             case 3:
-                printf("%d ", *(--p));
+                printf("%d三 ", *(--p));
             case 4:
-                printf("%d ", *(--p));
+                printf("%d四 ", *(--p));
         }
     }
 }*/

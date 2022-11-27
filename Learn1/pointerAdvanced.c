@@ -155,7 +155,7 @@ int main() {
     test(&p);
     return 0;
 }*/
-void test(char *pp) {}
+/*void test(char *pp) {}
 
 int main() {
     char c = 'x';
@@ -166,9 +166,20 @@ int main() {
     test(ppc);
     test(arr);
     return 0;
+}*/
+void test() {
+    printf("xFany\n");
 }
 
+void (*pfun1)();
 
+void *pfun2();
+
+int main() {
+    printf("%p\n", test);
+    printf("%p\n", &test);
+    return 0;
+}
 
 
 
