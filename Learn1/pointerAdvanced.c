@@ -167,7 +167,7 @@ int main() {
     test(arr);
     return 0;
 }*/
-void test() {
+/*void test() {
     printf("xFany\n");
 }
 
@@ -179,9 +179,42 @@ int main() {
     printf("%p\n", test);
     printf("%p\n", &test);
     return 0;
+}*/
+//p144
+/*int main() {
+    void copy_string(char from[], char to[]);
+    char a[] = "hello AFanny";
+    char b[] = "hello BFanny";
+    printf("string a=%s\nstring b=%s\n", a, b);
+    printf("\n将数组a复制到数组b的结果是：\n");
+    copy_string(a, b); //用字符数组名作函数实参
+    printf("\nstring a=%s\nstring b=%s\n", a, b);
+    return 0;
 }
 
+void copy_string(char from[], char to[]) //形参为字符数组
+{
+    int i = 0;
+    while (from[i] != '\0') {
+        to[i] = from[i];
+        i++;
+    }
+    to[i] = '\0';
+}*/
+//用字符型指针变量作实参
+void copy_string(char from[], char to[]) {
+    int i = 0;
+    while (from[i] != '\0') {
+        to[i] = from[i];
+        i++;
+        to[i] = '\0';
+    }
+}
 
-
-
+int main() {
+    char a[] = "hello AFanny";
+    char b[] = "hello BFanny";
+    
+    return 0;
+}
 
