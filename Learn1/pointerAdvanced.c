@@ -202,7 +202,7 @@ void copy_string(char from[], char to[]) //形参为字符数组
     to[i] = '\0';
 }*/
 //用字符型指针变量作实参
-void copy_string(char from[], char to[]) {
+/*void copy_string(char from[], char to[]) {
     int i = 0;
     while (from[i] != '\0') {
         to[i] = from[i];
@@ -214,7 +214,36 @@ void copy_string(char from[], char to[]) {
 int main() {
     char a[] = "hello AFanny";
     char b[] = "hello BFanny";
-    
+    char *from = a, *to = b;  // from指向a数组首元素，to指向b数组首元素
+    printf("string a=%s\nstring b=%s\n", a, b);
+    printf("\n将数组a复制到数组b的结果是：\n");
+    copy_string(from, to); //实参为字符数组
+    printf("\n string a=%s\nstring b=%s\n", a, b);
+    return 0;
+}*/
+//用字符指针变量作形参和实参
+void copy_string(char *from, char *to) { //定义函数，形参为字符指针变量
+    for (; *from != '\0'; from++, to++) {
+        *to = *from;
+    }
+    *to = '\0';
+}
+
+int main() {
+    char *a = "hello AFanny";
+    char b[] = "hello BFanny";
+    char *p = b;
+    printf("string a=%s\nstring b=%s\n", a, b);
+    printf("\n将数组a复制到数组b的结果是：\n");
+    copy_string(a, p);
+    printf("\nstring a=%s\nstring b=%s\n", a, b);
     return 0;
 }
+
+
+
+
+
+
+
 
