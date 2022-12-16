@@ -221,25 +221,6 @@ int main() {
     printf("\n string a=%s\nstring b=%s\n", a, b);
     return 0;
 }*/
-//用字符指针变量作形参和实参
-void copy_string(char *from, char *to) { //定义函数，形参为字符指针变量
-    for (; *from != '\0'; from++, to++) {
-        *to = *from;
-    }
-    *to = '\0';
-}
-
-int main() {
-    char *a = "hello AFanny";
-    char b[] = "hello BFanny";
-    char *p = b;
-    printf("string a=%s\nstring b=%s\n", a, b);
-    printf("\n将数组a复制到数组b的结果是：\n");
-    copy_string(a, p);
-    printf("\nstring a=%s\nstring b=%s\n", a, b);
-    return 0;
-}
-
 
 
 
