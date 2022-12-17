@@ -56,7 +56,7 @@ int main() {
 }*/
 
 //p158 例3 用n个学生的信息（包括学号、姓名、成绩），要求按照成绩的高低顺序输出各学生的信息。
-struct Student {
+/*struct Student {
     int num;
     char name[20];
     float score;
@@ -85,8 +85,20 @@ int main() {
         printf("%6d%8s%6.2f\n", stu[i].num, stu[i].name, stu[i].score);
     printf("\n");
     return 0;
+}*/
+int main() {
+    struct Student {
+        long num;
+        char name[20];
+        char sex;
+        float score;
+    };
+    struct Student stu_1; //定义struct Student类型的变量stu_1
+    struct Student *p;    //定义指向struct Student类型数据的指针变量p
+    p = &stu_1;             //p指向stu_1
+    stu_1.num = 10101;      //对结构体变量的成员赋值
+    strcpy(stu_1.name, "XFanny"); //用字符串赋值函数给stu_1.name赋值
 }
-
 
 
 
